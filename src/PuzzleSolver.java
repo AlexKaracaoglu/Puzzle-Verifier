@@ -35,8 +35,6 @@ public class PuzzleSolver {
         String difficulty = settings.getDifficulty();
         checkValidDifficultyFormat(difficulty);
 
-        Long startTime = System.currentTimeMillis();
-
         BlockchainHeader header = new BlockchainHeader(difficulty);
 
         Long nonce = 0L;
@@ -54,13 +52,6 @@ public class PuzzleSolver {
         objectOutputStream.writeObject(header);
 
         socket.close();
-
-
-//        Long endTime = System.currentTimeMillis();
-//
-//        System.out.println("Valid nonce is: " + nonce + ", Number of nonces checked: " + (nonce + 1));
-//        System.out.println("Hash Value is: " + hashValue);
-//        System.out.println("Time to find a valid hash: " + getTimeElapsedInSeconds(startTime, endTime) + " seconds");
     }
 
     private static void checkValidDifficultyFormat(String difficulty) {
@@ -71,9 +62,4 @@ public class PuzzleSolver {
             throw new IllegalArgumentException("Settings string must include only hex digits");
         }
     }
-
-    private static Double getTimeElapsedInSeconds(Long startTime, Long endTime) {
-        return (endTime - startTime) / 1000.;
-    }
-
 }

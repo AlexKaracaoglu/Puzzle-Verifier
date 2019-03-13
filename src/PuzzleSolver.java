@@ -16,6 +16,11 @@ import java.security.NoSuchAlgorithmException;
  * http://cs.lmu.edu/~ray/notes/javanetexamples/
  */
 
+/*
+ * Connects to the server (PuzzleVerifier), solves the puzzle as in HW2, then sends the resultant BlockchainHeader to
+ * the server to be verified if the header is in fact valid
+ */
+
 public class PuzzleSolver {
 
     private static final Integer SIXTY_FOUR = 64;

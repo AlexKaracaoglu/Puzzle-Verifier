@@ -17,6 +17,11 @@ import java.security.NoSuchAlgorithmException;
  * http://cs.lmu.edu/~ray/notes/javanetexamples/
  */
 
+/*
+ * PuzzleVerfier is the server. It starts up, waits for PuzzleSolver to solve the possible, then receives the
+ * BlockchainHeader that the solver sends over, and then verifies whether or not the header is valid
+ */
+
 public class PuzzleVerifier {
 
     private static final Integer TCP_PORT = 5000;

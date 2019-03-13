@@ -8,6 +8,10 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/*
+ * The Hash class provides the helper function hash that takes in a BlockchainHeader and returns its hash value
+ */
+
 public class Hash {
 
     private static final String SHA_256 = "SHA-256";

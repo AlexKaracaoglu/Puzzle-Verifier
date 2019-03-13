@@ -7,6 +7,10 @@
 import java.io.Serializable;
 import java.util.Random;
 
+/*
+ * The BlockchainHeader class that is used to store the values in the BlockchainHeader
+ */
+
 public class BlockchainHeader implements Serializable {
 
     private String hashOfPreviousBlockHeader;

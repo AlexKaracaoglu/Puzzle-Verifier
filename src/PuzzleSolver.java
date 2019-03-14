@@ -31,7 +31,7 @@ public class PuzzleSolver {
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
 
         Socket socket = new Socket(IP_ADDRESS, TCP_PORT);
-        System.out.println("Connection was made. Solving the puzzle...");
+        System.out.println("Solving the puzzle...");
 
         OutputStream outputStream = socket.getOutputStream();
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
@@ -53,6 +53,7 @@ public class PuzzleSolver {
             hashValue = Hash.hash(header);
         }
 
+        System.out.println("Puzzle Solved!");
         System.out.println("Sending message to the Puzzle Verifier...");
         objectOutputStream.writeObject(header);
 

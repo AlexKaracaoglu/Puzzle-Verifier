@@ -30,7 +30,7 @@ public class PuzzleVerifier {
 
         ServerSocket serverSocket = new ServerSocket(TCP_PORT);
 
-        System.out.println("Waiting for the block to be sent...");
+        System.out.println("Waiting for the block to be sent from PuzzleSolver...");
         Socket socket = serverSocket.accept();
 
         InputStream inputStream = socket.getInputStream();
